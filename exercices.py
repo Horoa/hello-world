@@ -35,10 +35,21 @@ def sumOfASerie():
 #4 L'utilisateur donne un entier positif n et le programme affiche PAIR s'il est divisible par 2, IMPAIR sinon
 
 def isOddOrEven():
-    numberInput = int(input("Take a number ?"))
+    numberInput = int(input("Take a number"))
     if numberInput%2 == 0 :
         print( str(numberInput) + " is even")
     else :
         print( str(numberInput) + " is odd")
     
+    
+#5 L'utilisateur donne un entier positif et le programme annonce combien de fois de suite cet entier est divisible par 2.
+
+def numberOfPossibleHalves():
+    numberInput = int(input("Take a number"))
+    numberOfHalves = 0
+    while numberInput != 0 and numberInput%2==0 :
+        numberInput/=2
+        numberOfHalves+=1
+    print("You can divide your number " + str(numberOfHalves) + " times")
+        
     
