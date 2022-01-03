@@ -1,5 +1,6 @@
 from math import pi
 
+# https://python.developpez.com/cours/apprendre-python-3/?page=exercices-corriges
 #1. Écrire un programme qui, à partir de la saisie d'un rayon et d'une hauteur, calcule le volume d'un cône droit.
 
 def findVolume(radius,height):
@@ -50,6 +51,28 @@ def numberOfPossibleHalves():
     while numberInput != 0 and numberInput%2==0 :
         numberInput/=2
         numberOfHalves+=1
-    print("You can divide your number " + str(numberOfHalves) + " times")
+    print("You can divide your number " + str(numberOfHalves) + " times\n")
+        
+    
+#6 L'utilisateur donne un entier supérieur à 1 et le programme affiche, s'il y en a, tous ses diviseurs propres sans répétition ainsi que leur nombre. S'il n'y en a pas, il indique qu'il est premier.
+
+def findCommonDivisor():
+    numberInput = int(input("Take a number"))
+    if numberInput == 0 :
+        print("0 has all integers other than 0 as a common divisor.\n")
+    elif numberInput == 1 :
+        print("1 has no common divisor but it isn't a prime number.\n")
+    else :
+        while numberInput < 2 : 
+            numberInput=int(input("please choose a number greater than 1"))
+        listOfCommonDivisor = []
+        for i in range(2, numberInput) :
+            if numberInput%i == 0 :
+                listOfCommonDivisor.append(i)
+        if len(listOfCommonDivisor) == 0 :
+            print( str(numberInput) + " has no common divisor, it's a prime number")
+        else :
+            print ( str(numberInput) + " has " + str(len(listOfCommonDivisor)) + " common divisor : " + str(listOfCommonDivisor))
+
         
     
