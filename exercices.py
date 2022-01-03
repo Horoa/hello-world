@@ -32,3 +32,13 @@ def sumOfASerie():
     print("The sum total of the serie is " + str(sumTotal) + " there was " + str(totalOfNumber) + " numbers and " + str(totalOfNumberHigherThanOneHundred) + " numbers higher than 100")
 
     
+#4 L'utilisateur donne un entier positif n et le programme affiche PAIR s'il est divisible par 2, IMPAIR sinon
+
+def isOddOrEven():
+    numberInput = int(input("Take a number ?"))
+    if numberInput%2 == 0 :
+        print( str(numberInput) + " is even")
+    else :
+        print( str(numberInput) + " is odd")
+    
+    
