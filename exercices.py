@@ -73,6 +73,24 @@ def findCommonDivisor():
             print( str(numberInput) + " has no common divisor, it's a prime number")
         else :
             print ( str(numberInput) + " has " + str(len(listOfCommonDivisor)) + " common divisor : " + str(listOfCommonDivisor))
+            
+#7 Écrire un programme qui approxime par défaut la valeur de la constante mathématique e, pour n assez grand(56)
 
-        
+def findE():
+    numberInput = 0
+    while numberInput < 1 :
+        numberInput = int(input("Number for the sum"))
+    sum = 0
+    for i in range(numberInput+1) : 
+        sum += 1.0/factoriel(i)
+    print("The value e is approximatively equals to " + str(sum))
     
+def factoriel(number) :
+    if number == 0 : 
+        return 1
+    return number*factoriel(number-1)
+
+
+#8  Un gardien de phare va aux toilettes cinq fois par jour. Or les WC sont au rez-de-chaussée…
+#   Écrire une procédure (donc sans return) hauteurParcourue qui reçoit deux paramètres, le nombre de marches du phare et la hauteur de chaque marche (en cm), et qui affiche :
+#   Pour x marches de y cm, il parcourt z.zz m par semaine.
