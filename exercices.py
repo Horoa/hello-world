@@ -106,3 +106,18 @@ def hauteurParcourue(nombreMarche, hauteurMarche):
 def calculateFine(countKillChicken, countKillDog, countKillCow, countKillHunter) :
     print(str(((countKillChicken+countKillDog*3+countKillCow*5+countKillHunter*10)//100)*200)+ "€")
 
+    
+#10 Je suis ligoté sur les rails en gare d'Arras. Écrire un programme qui affiche un tableau me permettant de connaître l'heure à laquelle je serai déchiqueté par le train parti de la gare du Nord à 9 h (il y a 170 km entre la gare du Nord et Arras).
+#   Le tableau prédira les différentes heures possibles pour toutes les vitesses de 100 km/h à 300 km/h, par pas de 10 km/h, les résultats étant arrondis à la minute inférieure.
+#       Écrire une procédure tchacatchac qui reçoit la vitesse du train et qui affiche l'heure du drame ;
+#       Écrire le programme principal qui affiche le tableau demandé.
+
+def tchacatchac(trainSpeed):
+    hour = 170//trainSpeed
+    min = int(170%trainSpeed*60/trainSpeed)
+    minTen = '0' if min<10 else ''
+    print (str(trainSpeed) + "km/h => " + str(9+hour) + "h" + minTen + str(min))
+
+def stationTab():
+    for vitesse in range(100,310,10):
+        tchacatchac(vitesse)
