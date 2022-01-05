@@ -99,4 +99,10 @@ def hauteurParcourue(nombreMarche, hauteurMarche):
     print("For " + str(nombreMarche) + " steps of " + str(hauteurMarche) + "cm, he walks " + str(nombreMarche*hauteurMarche*2*7*5/100) + "m per week")
 
    
+#9  Un permis de chasse à points remplace désormais le permis de chasse traditionnel. Chaque chasseur possède au départ un capital de 100 points. S'il tue une poule, il perd 1 point, 3 points pour un chien, 5 points pour une vache et 10 points pour un ami. Le permis coûte 200 euros.
+#   Écrire une fonction amende qui reçoit le nombre de victimes du chasseur et qui renvoie la somme due.
+#   Utilisez cette fonction dans un programme principal qui saisit le nombre de victimes et qui affiche la somme que le chasseur doit débourser.
+
+def calculateFine(countKillChicken, countKillDog, countKillCow, countKillHunter) :
+    print(str(((countKillChicken+countKillDog*3+countKillCow*5+countKillHunter*10)//100)*200)+ "€")
 
