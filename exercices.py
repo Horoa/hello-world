@@ -94,3 +94,9 @@ def factoriel(number) :
 #8  Un gardien de phare va aux toilettes cinq fois par jour. Or les WC sont au rez-de-chaussée…
 #   Écrire une procédure (donc sans return) hauteurParcourue qui reçoit deux paramètres, le nombre de marches du phare et la hauteur de chaque marche (en cm), et qui affiche :
 #   Pour x marches de y cm, il parcourt z.zz m par semaine.
+
+def hauteurParcourue(nombreMarche, hauteurMarche):
+    print("For " + str(nombreMarche) + " steps of " + str(hauteurMarche) + "cm, he walks " + str(nombreMarche*hauteurMarche*2*7*5/100) + "m per week")
+
+   
+
