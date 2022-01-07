@@ -173,3 +173,9 @@ def exercice11():
         sequence = str(input("your sequence isn't valide "))
     print ("There is " + str(proportion(sequence, chain)) + "% of " + sequence + " in your chain")
 
+#12 Il s'agit d'écrire, d'une part, un programme principal et, d'autre part, une fonction utilisée dans le programme principal.
+#   La fonction listAleaInt(n, a, b) retourne une liste de n entiers aléatoires dans [a .. b] en utilisant la fonction randint(a, b) du module random.
+#   ns le programme principal :
+#   construire la liste en appelant la fonction listAleaInt() ;
+#   calculer l'index de la case qui contient le minimum ;
+#   échangez le premier élément du tableau avec son minimum.
