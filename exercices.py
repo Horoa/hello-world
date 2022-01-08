@@ -1,4 +1,5 @@
 from math import pi
+from random import randint
 
 # https://python.developpez.com/cours/apprendre-python-3/?page=exercices-corriges
 #1. Écrire un programme qui, à partir de la saisie d'un rayon et d'une hauteur, calcule le volume d'un cône droit.
@@ -179,3 +180,19 @@ def exercice11():
 #   construire la liste en appelant la fonction listAleaInt() ;
 #   calculer l'index de la case qui contient le minimum ;
 #   échangez le premier élément du tableau avec son minimum.
+
+def listAleaInt(n, a, b):
+    list = []
+    for (i in range(n)):
+        list += randint(a,b)
+    return list
+    
+
+def exercice12():
+    n = int(input("size of your list ?"))
+    while n<1:
+        n = int(input("your number must be >1"))
+    a = int(input("first number ?"))
+    b = int(input("second number ?"))
+    while b<a:
+        b = int(input("your number must be >a"))
