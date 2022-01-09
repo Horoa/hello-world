@@ -183,9 +183,19 @@ def exercice11():
 
 def listAleaInt(n, a, b):
     list = []
-    for (i in range(n)):
-        list += randint(a,b)
+    for i in range(n):
+        list.append(randint(a,b))
     return list
+
+def posOfTheMin(list):
+    min = list[0]
+    minPos = 0
+    for i in range(1,len(list)) :
+        if (min>list[i]):
+            minPos=i
+            min = list[i]
+    return i
+        
     
 
 def exercice12():
@@ -196,3 +206,7 @@ def exercice12():
     b = int(input("second number ?"))
     while b<a:
         b = int(input("your number must be >a"))
+    list = listAleaInt(n,a,b)
+    print(list)
+    posMin = posOfTheMin(list)
+    print(posMin)
