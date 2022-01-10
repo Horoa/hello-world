@@ -194,9 +194,7 @@ def posOfTheMin(list):
         if (min>list[i]):
             minPos=i
             min = list[i]
-    return i
-        
-    
+    return minPos
 
 def exercice12():
     n = int(input("size of your list ?"))
@@ -210,3 +208,6 @@ def exercice12():
     print(list)
     posMin = posOfTheMin(list)
     print(posMin)
+    list[0],list[posMin]=list[posMin],list[0]
+    print(list)
+
