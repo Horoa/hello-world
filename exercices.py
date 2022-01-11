@@ -235,4 +235,24 @@ def exercice13():
         if number<min:
             min = number
     print("The min is " + str(min) + ", the max is " + str(max) + ", the amplitude is " + str(max-min) + ", and the mean is " + str(sumTotal/n))
+    
+#14 Fonction renvoyant plusieurs valeurs sous forme d'un tuple.
+#   Écrire une fonction minMaxMoy() qui reçoit une liste d'entiers et qui renvoie le minimum, le maximum et la moyenne de cette liste. Le programme principal appellera cette fonction avec la liste : [10, 18, 14, 20, 12, 16].
+
+def minMaxMoy(list):
+    n = len(list)
+    print(list)
+    sumTotal=0
+    min = list[0]
+    max = list[0]
+    for number in list :
+        sumTotal += number
+        if number>max:
+            max = number
+        if number<min:
+            min = number
+    print("The min is " + str(min) + ", the max is " + str(max) + ", and the mean is " + str(sumTotal/n))
+
+def exercice14():
+    minMaxMoy([10, 18, 14, 20, 12, 16])
         
