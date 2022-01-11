@@ -210,4 +210,29 @@ def exercice12():
     print(posMin)
     list[0],list[posMin]=list[posMin],list[0]
     print(list)
-
+    
+#13 Comme précédemment, il s'agit d'écrire, d'une part, un programme principal et, d'autre part, une fonction utilisée dans le programme principal.
+#   La fonction listAleaFloat(n) retourne une liste de n flottants aléatoires en utilisant la fonction random() du module random.
+#   Dans le programme principal :
+#   saisir un entier n dans l'intervalle : [2 .. 100] ;
+#   construire la liste en appelant la fonction listAleaFloat() ;
+#   afficher l'amplitude du tableau (écart entre sa plus grande et sa plus petite valeur) ;
+#   afficher la moyenne du tableau.
+    
+def exercice13():
+    n = int(input("size of your list ?"))
+    while n<1 or n>100:
+        n = int(input("your number must be in [2,100]"))
+    list = [random() for i in range(n)]
+    print(list)
+    sumTotal=0
+    min = list[0]
+    max = list[0]
+    for number in list :
+        sumTotal += number
+        if number>max:
+            max = number
+        if number<min:
+            min = number
+    print("The min is " + str(min) + ", the max is " + str(max) + ", the amplitude is " + str(max-min) + ", and the mean is " + str(sumTotal/n))
+        
