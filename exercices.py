@@ -221,7 +221,7 @@ def exercice12():
     
 def exercice13():
     n = int(input("size of your list ?"))
-    while n<1 or n>100:
+    while n<2 or n>100:
         n = int(input("your number must be in [2,100]"))
     list = [random() for i in range(n)]
     print(list)
@@ -255,4 +255,37 @@ def minMaxMoy(list):
 
 def exercice14():
     minMaxMoy([10, 18, 14, 20, 12, 16])
+    
+
+    
+#15 Saisir un entier entre 1 et 3999 (pourquoi cette limitation ?). L'afficher en nombre romain.
+
+def romain(n):
+    millier=["","M","MM","MMM"]
+    centaine=["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"]
+    dizaine=["","X","X","XXX","XL","L","LX","LXX","LXXX","XC"]
+    unite=["","I","II","III","IV","V","VI","VII","VIII","IX"]
+
+    number = str(n)
+    if n<1000 :
+        number = "0" + number
+    if n<100 :
+        number = "0" + number
+    if n<10 :
+        number = "0" + number
+    print(str(n) + " = " , end = '')
+    print(millier[int(number[0])], end = '')
+    print(centaine[int(number[1])], end = '')
+    print(dizaine[int(number[2])], end = '')
+    print(unite[int(number[3])])
+    
+def exercice15():
+    n = int(input("the number you want in roman ?"))
+    while n<1 or n>4000:
+        n = int(input("your number must be in [1,3999]"))
+    romain(n)
+
+def exercice15test():
+    for i in range(4000) :
+        romain(i)
         
