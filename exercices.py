@@ -289,3 +289,4 @@ def exercice15test():
     for i in range(4000) :
         romain(i)
         
+#16 Améliorer le script précédent en utilisant la fonction zip().
