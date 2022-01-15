@@ -290,3 +290,18 @@ def exercice15test():
         romain(i)
         
 #16 Améliorer le script précédent en utilisant la fonction zip().
+
+def exercice17():
+    n = int(input("size of your list ?"))
+    while n<2 or n>100:
+        n = int(input("your number must be in [2,100]"))
+    list = listAleaInt(n,0,500)
+    print(list)
+    listTest = [False for i in range(500)]
+    duplicate = False
+    for i in range(n):
+        if listTest[list[i]] == False :
+            listTest[list[i]] = True
+        else :
+            duplicate = True
+    print(duplicate)
