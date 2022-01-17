@@ -306,9 +306,30 @@ def exercice17():
             duplicate = True
     print(duplicate)
 
+def twoDice(n):
+    list=[]
+    for i in range(1,7):
+        if 7>(n-i)>0 :
+            list.append([i,n-i])
+    return list
+    
     
 def exercice19():
     n = int(input("number to get with 2 dices ?"))
+    while n<2 or n>12:
+        n = int(input("your number must be in [2,12]"))
+    for i in range(1,7):
+        if 7>(n-i)>0 :
+            print(str(i) + " and " + str(n-i))
+            
+def threeDice(n)
+    list=[]
+    for i in range(1,7):
+        if  13>(n-i)>2:
+            
+            
+def exercice20():
+    n = int(input("number to get with 3 dices ?"))
     while n<2 or n>12:
         n = int(input("your number must be in [2,12]"))
     for i in range(1,7):
