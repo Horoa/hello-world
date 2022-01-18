@@ -322,16 +322,24 @@ def exercice19():
         if 7>(n-i)>0 :
             print(str(i) + " and " + str(n-i))
             
-def threeDice(n)
+def addFirstElementList(n,list):
+    listWithFirst = []
+    for i in list :
+        listWithFirst.append([n,*i])
+    return listWithFirst
+            
+def threeDice(n):
     list=[]
     for i in range(1,7):
         if  13>(n-i)>2:
+            list=[*list,*addFirstElementList(n,twoDice(n-i))]
+    print(list)
+        
+            
             
             
 def exercice20():
     n = int(input("number to get with 3 dices ?"))
     while n<2 or n>12:
         n = int(input("your number must be in [2,12]"))
-    for i in range(1,7):
-        if 7>(n-i)>0 :
-            print(str(i) + " and " + str(n-i))
+    threeDice(n-4)
