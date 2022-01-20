@@ -340,5 +340,21 @@ def exercice20():
     while n<3 or n>18:
         n = int(input("your number must be in [3,18]"))
     threeDice(n)
+    
+    def exercice21():
+    numberOfDice= int(input("number of dices ?"))
+    while numberOfDice<0:
+        somme = int(input("your number must be <0"))
+    somme = int(input("number to get with " + str(numberOfDice) + " dices ?"))
+    while somme<numberOfDice or somme>(6*numberOfDice):
+        somme = int(input("your number must be in ["+ str(numberOfDice) + "," + str(6*numberOfDice)+ "]"))
+    
+
+def numberDice(n):
+    list=[]
+    for i in range(1,7):
+        if  13>(n-i)>1:
+            list=[*list,*addFirstElementList(i,twoDice(n-i))]
+    print(list)
 
             
