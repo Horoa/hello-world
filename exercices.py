@@ -350,11 +350,22 @@ def exercice20():
         somme = int(input("your number must be in ["+ str(numberOfDice) + "," + str(6*numberOfDice)+ "]"))
     
 
-def numberDice(n):
+def exercice21():
+    numberOfDice= int(input("number of dices ?"))
+    while numberOfDice<0:
+        somme = int(input("your number must be <0"))
+    somme = int(input("number to get with " + str(numberOfDice) + " dices ?"))
+    while somme<numberOfDice or somme>(6*numberOfDice):
+        somme = int(input("your number must be in ["+ str(numberOfDice) + "," + str(6*numberOfDice)+ "]"))
+    print(numberDice(numberOfDice,somme))
+
+def numberDice(numberOfDice,somme):
+    if numberOfDice==1:
+        return [7-somme]
     list=[]
-    for i in range(1,7):
-        if  13>(n-i)>1:
-            list=[*list,*addFirstElementList(i,twoDice(n-i))]
-    print(list)
+    for valueDice in range(1,7):
+        if  ((numberOfDice+1)*6)>(somme-valueDice)>numberOfDice:
+            return [*list,*addFirstElementList(valueDice,numberDice(numberOfDice-1,somme-valueDice))]
+        
 
             
