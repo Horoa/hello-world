@@ -360,11 +360,14 @@ def exercice21():
     print(numberDice(numberOfDice,somme))
 
 def numberDice(numberOfDice,somme):
+    print("On rentre dans le recursif. Number Of Dice = " + str(numberOfDice) + " somme = " + str(somme))
     if numberOfDice==1:
-        return [7-somme]
+        return [[somme]]
     list=[]
     for valueDice in range(1,7):
-        if  ((numberOfDice+1)*6)>(somme-valueDice)>numberOfDice:
+        if((numberOfDice-1)*6)>=(somme-valueDice)>numberOfDice:
+            print(list)
+            print(addFirstElementList(valueDice,numberDice(numberOfDice-1,somme-valueDice)))
             return [*list,*addFirstElementList(valueDice,numberDice(numberOfDice-1,somme-valueDice))]
         
 
