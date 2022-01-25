@@ -34,7 +34,7 @@ def simulation(lpWin,lpLose,lp,rank,winrate):
             print("BO pour le Diamant " + str(rank-1))
             win = 0
             lose = 0
-            while ((rank == 1 and lose <3 and win <3) or (rank > 1 and lose < 2 and win <2)):
+            while (rank == 1 and lose <3 and win <3):
                 result = random()
                 game+=1
                 if result<winrate :
@@ -43,7 +43,7 @@ def simulation(lpWin,lpLose,lp,rank,winrate):
                 else :
                     lose+=1
                     print("LOSE ! win = " + str(win) + " lose = " + str(lose))
-            if win > lose :
+            if win >= lose :
                 rank -=1
                 print("Promu Diamant " + str(rank))
                 lp = 0
