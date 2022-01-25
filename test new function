@@ -1,2 +1,24 @@
-print()
-abs()
+#this function allow you to print something in the terminal 
+  print()
+  
+  print("Hello")
+  >Hello
+  
+  
+#this function return the absolute value of a number
+  abs()
+  
+  abs(-1)
+  >1
+  abs(1)
+  >1
+  
+  
+#this function return the rounded value of a number 
+  round()
+
+  round(1,6)
+  >1
+  round(-1,6)
+  >-1
+
