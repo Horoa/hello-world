@@ -21,4 +21,17 @@
   >1
   round(-1,6)
   >-1
+  
+  
+#this function 
+
+  entity.join(List)
+  "O".join(["a","b",c")
+  >"aObOc"
+  
+  
+#this function
+
+  ["a" if _ else "b" for _ in [True,False]]
+  >["a","b"]
 
